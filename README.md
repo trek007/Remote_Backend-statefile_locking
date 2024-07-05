@@ -27,12 +27,6 @@ State file locking is a mechanism to prevent concurrent operations on the state 
 - **Automatic Handling:** Terraform automatically locks the state file when running operations that modify the state and unlocks it when the operation completes.
 - **Manual Intervention:** In case of issues, locks can be manually removed or inspected.
 
-## Commands Related to State File Locking
-**terraform force-unlock:** Manually remove a lock.
-```hcl
-terraform force-unlock LOCK_ID
-
-
 ## Best Practices
 
 1. **Enable Remote Backends:** Always use remote backends for production environments to ensure state file security and collaboration.
@@ -40,3 +34,8 @@ terraform force-unlock LOCK_ID
 3. **Use Version Control:** Store Terraform configurations in version control systems (e.g., Git) to track changes and collaborate effectively.
 4. **Regular Backups:** Regularly backup the state file, especially when using custom or less common remote backends.
 5. **Access Control:** Restrict access to the remote backend storage and state locking mechanisms to authorized users only.
+
+## Commands Related to State File Locking
+**terraform force-unlock:** Manually remove a lock.
+```hcl
+terraform force-unlock LOCK_ID
