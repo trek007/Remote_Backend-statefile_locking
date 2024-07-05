@@ -29,7 +29,6 @@ State file locking is a mechanism to prevent concurrent operations on the state 
 
 ## Commands Related to State File Locking
 **terraform force-unlock:** Manually remove a lock.
-**terraform force-unlock LOCK_ID**
 ```hcl
 terraform force-unlock LOCK_ID
 
