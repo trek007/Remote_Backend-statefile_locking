@@ -32,6 +32,7 @@ State file locking is a mechanism to prevent concurrent operations on the state 
 ```hcl
 terraform force-unlock LOCK_ID
 
+
 ## Best Practices
 
 1. **Enable Remote Backends:** Always use remote backends for production environments to ensure state file security and collaboration.
