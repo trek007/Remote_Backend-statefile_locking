@@ -30,16 +30,6 @@ State file locking is a mechanism to prevent concurrent operations on the state 
 ## Commands Related to State File Locking
 **terraform force-unlock:** Manually remove a lock.
 **terraform force-unlock LOCK_ID**
-
-## Configuration Example (Amazon S3)
 ```hcl
-terraform {
-  backend "s3" {
-    bucket         = "my-terraform-state"
-    key            = "path/to/my/terraform.tfstate"
-    region         = "us-west-2"
-    encrypt        = true
-    dynamodb_table = "terraform-state-lock"
-  }
-}
+terraform force-unlock LOCK_ID
 
